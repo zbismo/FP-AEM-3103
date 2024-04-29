@@ -27,7 +27,7 @@
 	to		=	0;			% Initial Time, sec
 	tf		=	6;			% Final Time, sec
 	tspan	=	[to tf];
-	xo		=	[V;Gam;H;R];
+	xo		=	[V;Gam;H;R];f
 	[ta,xa]	=	ode23('EqMotion',tspan,xo);
 	
 %	b) Oscillating Glide due to Zero Initial Flight Path Angle
