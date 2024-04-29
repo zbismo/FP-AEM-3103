@@ -1,4 +1,4 @@
-	function xdot = EqMotion(t,x)
+function xdot = EqMotion(t,x)
 %	Fourth-Order Equations of Aircraft Motion
 
 	global CL CD S m g rho
