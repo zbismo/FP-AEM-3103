@@ -40,10 +40,10 @@
     [t3, x3] = ode23('EqMotion',tspan,x3_v);
 
     x1_gam = [V;-0.5;H;R];
-    [t4, x4] = ode23('EqMotion',tspan, x1_gam);
+    [t4,x4] = ode23('EqMotion',tspan, x1_gam);
     x2_gam = [V;-0.18;H;R];
     [t5, x5] = ode23('EqMotion',tspan, x2_gam);
-    x3_gam = [V;-0.5;H;R];
+    x3_gam = [V;0.4;H;R];
     [t6, x6] = ode23('EqMotion',tspan, x3_gam);
     
     figure(1)
