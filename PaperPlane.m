@@ -27,8 +27,35 @@
 	to		=	0;			% Initial Time, sec
 	tf		=	6;			% Final Time, sec
 	tspan	=	[to tf];
-	xo		=	[V;Gam;H;R];f
+	xo		=	[V;Gam;H;R]; 
 	[ta,xa]	=	ode23('EqMotion',tspan,xo);
+
+
+%   2) changing initial velocity and initial flight path angle
+    x1_v = [2;Gam;H;R];
+    [t1,x1] = ode23('EqMotion',tspan,x1_v);
+    x2_v = [3.55;Gam;H;R];
+    [t2,x2] = ode23('EqMotion',tspan,x2_v);
+    x3_v = [7.5;Gam;H;R];
+    [t3, x3] = ode23('EqMotion',tspan,x3_v);
+
+    x1_gam = [V;-0.5;H;R];
+    [t4, x4] = ode23('EqMotion',tspan, x1_gam);
+    x2_gam = [V;-0.18;H;R];
+    [t5, x5] = ode23('EqMotion',tspan, x2_gam);
+    x3_gam = [V;-0.5;H;R];
+    [t6, x6] = ode23('EqMotion',tspan, x3_gam);
+    
+    figure(1)
+    subplot(2,1,1);
+	plot(x1(:,4),x1(:,3),'r',x2(:,4),x2(:,3),'k',x3(:,4),x3(:,3),'g');
+	xlabel('Range, m'), ylabel('Height, m'), grid;
+
+
+    subplot(2,1,2);
+	plot(x4(:,4),x4(:,3),'r',x5(:,4),x5(:,3),'k', x6(:,4),x6(:,3),'g');
+	xlabel('Range, m'), ylabel('Height, m'), grid;
+    
 	
 %	b) Oscillating Glide due to Zero Initial Flight Path Angle
 	xo		=	[V;0;H;R];
@@ -42,11 +69,11 @@
 	xo		=	[3*V;0;H;R];
 	[td,xd]	=	ode23('EqMotion',tspan,xo);
 	
-	figure
+	figure(2)
 	plot(xa(:,4),xa(:,3),xb(:,4),xb(:,3),xc(:,4),xc(:,3),xd(:,4),xd(:,3))
 	xlabel('Range, m'), ylabel('Height, m'), grid
 
-	figure
+	figure(3)
 	subplot(2,2,1)
 	plot(ta,xa(:,1),tb,xb(:,1),tc,xc(:,1),td,xd(:,1))
 	xlabel('Time, s'), ylabel('Velocity, m/s'), grid
