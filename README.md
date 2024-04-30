@@ -26,7 +26,7 @@
 
   ## Fig. 2: Monte Carlo Simulation
   <2D trajectories simulated using random sampling of parameters, overlay polynomial fit onto plot.>
-![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/04c3729b-cc5b-4c1b-9dbc-96d07eaf5101)
+![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/e1c282d7-f82a-4ae3-a6ab-3eb08fe2a21d)
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/363b3d87-b954-44f5-96c4-1d4bd0a6d5e5)
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/13d2404c-f17f-499c-806f-aefcd6e61fd8)
 
