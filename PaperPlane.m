@@ -41,21 +41,38 @@
 
 
 %   3) Creating 100 random trials
+    H_tot = zeros(100,100);
+    R_tot = zeros(100,100);
     for i=1:100
-        Vmin = 2; Vmax = 7.5; Gmin = -0.5; Gmax = 0.4; Hmin = 0; Hmax = 2;
+        Vmin = 2; Vmax = 7.5; Gmin = -0.5; Gmax = 0.4;
         V_rand = Vmin + (Vmax-Vmin)*rand(1);
         Gam_rand = Gmin + (Gmax-Gmin)*rand(1);
-        H_rand = Hmin + (Hmax-Hmin)*rand(1);
+        tspan4 = 0:6/99:6;
 
-        x_rand = [V_rand; Gam_rand; H_rand; R];
+        x_rand = [V_rand; Gam_rand; H; R];
 
-        [t_rand,xRand] = ode23('EqMotion',tspan,x_rand);
+        [t_rand,xRand] = ode23('EqMotion',tspan4,x_rand);
         figure(2)
         plot(xRand(:,4),xRand(:,3));
         hold on;
         xlabel('Range, m'); ylabel('Height, m');
 
+        
+        
+        H_tot(i,:) = xRand(:,3)';
+        R_tot(i,:) = xRand(:,4)';
+
+        
     end
+    figure(3)
+    R_mean = mean(R_tot);
+    H_mean = mean(H_tot);
+    plot(tspan4,H_mean,'Marker','*');
+    xlabel('time, s'); ylabel('Height, m');
+
+    figure(4)
+    plot(tspan4,R_mean, 'Marker','*');
+    xlabel('time, s'); ylabel('Range, m');
     
 	
 
@@ -72,11 +89,11 @@
 	xo		=	[3*V;0;H;R];
 	[td,xd]	=	ode23('EqMotion',tspan,xo);
 	
-	figure(3)
+	figure(5)
 	plot(xa(:,4),xa(:,3),xb(:,4),xb(:,3),xc(:,4),xc(:,3),xd(:,4),xd(:,3))
 	xlabel('Range, m'), ylabel('Height, m'), grid
 
-	figure(4)
+	figure(6)
 	subplot(2,2,1)
 	plot(ta,xa(:,1),tb,xb(:,1),tc,xc(:,1),td,xd(:,1))
 	xlabel('Time, s'), ylabel('Velocity, m/s'), grid
