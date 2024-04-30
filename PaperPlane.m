@@ -1,7 +1,7 @@
-%	Example 1.3-1 Paper Airplane Flight Path
+%%  AEM 3103 Final Project, Zachary Elliott & Wesley Girardi
 %	Copyright 2005 by Robert Stengel
 %	August 23, 2005
-% AEM 3103 Final Project, Zachary Elliott & Wesley Girardi
+
 
 	
 	
@@ -42,17 +42,18 @@
 
 %   3) Creating 100 random trials
     for i=1:100
-        Vmin = 2; Vmax = 7.5; Gmin = -0.5; Gmax = 0.4;
+        Vmin = 2; Vmax = 7.5; Gmin = -0.5; Gmax = 0.4; Hmin = 0; Hmax = 2;
         V_rand = Vmin + (Vmax-Vmin)*rand(1);
         Gam_rand = Gmin + (Gmax-Gmin)*rand(1);
-        
-        x_rand = [V_rand; Gam_rand; H; R];
+        H_rand = Hmin + (Hmax-Hmin)*rand(1);
+
+        x_rand = [V_rand; Gam_rand; H_rand; R];
+
         [t_rand,xRand] = ode23('EqMotion',tspan,x_rand);
         figure(2)
         plot(xRand(:,4),xRand(:,3));
         hold on;
         xlabel('Range, m'); ylabel('Height, m');
-
 
     end
     
