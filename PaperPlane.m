@@ -64,6 +64,8 @@
 
         
     end
+    %4) Creating graphs using polyfit of the average trajectories, Time vs
+    % Height and Range
     figure(3)
     R_mean = mean(R_tot);
     H_mean = mean(H_tot);
@@ -79,12 +81,24 @@
     plot(tspan4,R_mean, 'Marker','*');
     xlabel('Time, s'); ylabel('Range, m');
     % Polyfit for our time versus range
-    pr = polyfit(tspan4, R_mean, 5);
+    pr = polyfit(tspan4, R_mean, 1);
     yr = polyval(pr, tspan4);
     hold on;
     plot(tspan4,yr, "LineWidth", 2)
 	
 
+
+    % 5) Time derivatives of these trajectories with plots
+    dh_dt = diff(yh);
+    dr_dt = diff(yr);
+    dh_dtG =gradient(yh); dr_dtG = gradient(yr);
+    figure(5)
+    subplot(2,1,1)
+    plot(tspan4, dh_dtG, "LineWidth", 2)
+    xlabel('Time, s'), ylabel('Change in Height, m/s'), grid, title('Derivative of Height WRT');
+    subplot(2,1,2)
+    plot(tspan4, dr_dtG, "LineWidth", 2)
+    xlabel('Time, s'), ylabel('Change in Range, m/s'), grid, title('Derivative of Range WRT');
 
 %	b) Oscillating Glide due to Zero Initial Flight Path Angle
 	xo		=	[V;0;H;R];
@@ -98,11 +112,11 @@
 	xo		=	[3*V;0;H;R];
 	[td,xd]	=	ode23('EqMotion',tspan,xo);
 	
-	figure(5)
+	figure(6)
 	plot(xa(:,4),xa(:,3),xb(:,4),xb(:,3),xc(:,4),xc(:,3),xd(:,4),xd(:,3))
 	xlabel('Range, m'), ylabel('Height, m'), grid
 
-	figure(6)
+	figure(7)
 	subplot(2,2,1)
 	plot(ta,xa(:,1),tb,xb(:,1),tc,xc(:,1),td,xd(:,1))
 	xlabel('Time, s'), ylabel('Velocity, m/s'), grid
