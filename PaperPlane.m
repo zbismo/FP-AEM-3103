@@ -68,12 +68,21 @@
     R_mean = mean(R_tot);
     H_mean = mean(H_tot);
     plot(tspan4,H_mean,'Marker','*');
-    xlabel('time, s'); ylabel('Height, m');
+    xlabel('Time, s'); ylabel('Height, m');
+    % Polyfit for our time versus height
+    ph = polyfit(tspan4, H_mean, 11);
+    yh = polyval(ph, tspan4);
+    hold on;
+    plot(tspan4, yh, "LineWidth", 2)
 
     figure(4)
     plot(tspan4,R_mean, 'Marker','*');
-    xlabel('time, s'); ylabel('Range, m');
-    
+    xlabel('Time, s'); ylabel('Range, m');
+    % Polyfit for our time versus range
+    pr = polyfit(tspan4, R_mean, 5);
+    yr = polyval(pr, tspan4);
+    hold on;
+    plot(tspan4,yr, "LineWidth", 2)
 	
 
 
