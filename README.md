@@ -17,6 +17,8 @@
   # Figures
 
   ## Fig. 1: Single Parameter Variation
+  ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/4700f6dc-8b11-4e2e-a038-76032b0be496)
+
   <2D trajectory simulated by varying single parameter at at time>
   <The above plot should also show the nominal trajectory>
 
