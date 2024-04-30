@@ -19,18 +19,27 @@
   ## Fig. 1: Single Parameter Variation
   ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/4700f6dc-8b11-4e2e-a038-76032b0be496)
 
-  <2D trajectory simulated by varying single parameter at at time>
+  2D trajectory simulated by varying single parameter at at time
   <The above plot should also show the nominal trajectory>
 
   Briefly describe what is being shown in the figure.
 
   ## Fig. 2: Monte Carlo Simulation
   <2D trajectories simulated using random sampling of parameters, overlay polynomial fit onto plot.>
+![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/04c3729b-cc5b-4c1b-9dbc-96d07eaf5101)
+![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/363b3d87-b954-44f5-96c4-1d4bd0a6d5e5)
+![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/13d2404c-f17f-499c-806f-aefcd6e61fd8)
+
+
+
+
+
 
   Briefly describe what is being shown in the figure.
 
  ## Fig. 3: Time Derivatives
  <Time-derivative of height and range for the fitted trajectory>
+![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/f4419d37-985b-4c22-b2e8-24a8be4fa49a)
 
   Briefly describe what is being shown in the figure.
 
