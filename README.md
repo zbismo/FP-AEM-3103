@@ -15,8 +15,12 @@
  
   # Code Listing
   A list of each function/script and a single-line description of what it does.  The name of the function/script should link to the file in the repository on GitHub.
-   [V Gam H R] = setup_sim();
-   This setup function allows us to make our main code more efficient by storing our initialized values and other known paramaters, and loading them in when we run the file.
+   PaperPlane.m
+   This is our main code, where main simulations are run, and results are obatained and plotted in.
+   EqMotion.m
+   This function solves the fourth order equations of motion for an aircraft.
+   setup_sim.m
+   This function is simply used to store intialized variables and other parameters, to tidy up our main code space, and speed up runtime.
    
   # Figures
 
