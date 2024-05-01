@@ -18,37 +18,28 @@
 
   ## Fig. 1: Single Parameter Variation
   ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/4700f6dc-8b11-4e2e-a038-76032b0be496)
-
-  2D trajectory simulated by varying single parameter at at time
-  <The above plot should also show the nominal trajectory>
-
-  Briefly describe what is being shown in the figure.
+  This graph with sublots shows changing initial velocity versus height across three different points (higher, lower, and nominal). The second subplot shows changing in initial flight path angle, with again a higher, lower, and nominal input. 
+  
+ 
 
   ## Fig. 2: Monte Carlo Simulation
   <2D trajectories simulated using random sampling of parameters, overlay polynomial fit onto plot.>
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/e1c282d7-f82a-4ae3-a6ab-3eb08fe2a21d)
+This is a figure of the 100 random simulation runs for height versus range. I say "a" figure as with each time running the code, a new generation would be applied and vary somewhat, as they are random.
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/363b3d87-b954-44f5-96c4-1d4bd0a6d5e5)
+This is a figure for the average height trajectories of the 100 random samples wrt. We used the polyfit function to the 11th order, as we found it to fit the points the best.
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/13d2404c-f17f-499c-806f-aefcd6e61fd8)
-
-
-
-
-
-
-  Briefly describe what is being shown in the figure.
+This is a figure for the average range tracjectories of the 100 random samples wrt. We used the polyfit function, but this time just to the 1st order, as our range vs time was pretty linear.
 
  ## Fig. 3: Time Derivatives
  <Time-derivative of height and range for the fitted trajectory>
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/f4419d37-985b-4c22-b2e8-24a8be4fa49a)
 
-  Briefly describe what is being shown in the figure.
+  In our figures, we take the derivates of our poly functions with respecte to times for our Heights and Ranges vs Time, respectively. In other words, we have graphs of Velocities for Range and Height graphed out. Our second graph represents a linear range vs time derivative, which ideally would be flat. It is close to being flat, but the small areas where it is not flat can be attributed to noise due to the randomness of the trials. If we did say 1000 trials, we might not notice the noise as much.
 
-  (Below are for teams of 2-3 people)
+ 
 
   # Animation
   ## Point-Mass Animation
   <Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)>
-  
-  (Below are for teams of 3 people)
-  ## Graphical Animation
-  <Same as the above animation, except that the moving *point* should be a 2D drawing of an airplane, drawn using CAD>
+ 
