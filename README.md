@@ -14,13 +14,15 @@
   *If the analysis falls short of the goal, this is your chance to explain what was done or what were the barriers.*
  
   # Code Listing
-  A list of each function/script and a single-line description of what it does.  The name of the function/script should link to the file in the repository on GitHub.
+
    [PaperPlane.m](https://github.com/zbismo/FP-AEM-3103/blob/master/PaperPlane.m)
-   This is our main code, where main simulations are run, and results are obatained and plotted in.
-   EqMotion.m
-   This function solves the fourth order equations of motion for an aircraft.
-   setup_sim.m
-   This function is simply used to store intialized variables and other parameters, to tidy up our main code space, and speed up runtime.
+     This is our main code, where main simulations are run, and results are obatained and plotted in.
+  
+    [EqMotion.m](https://github.com/zbismo/FP-AEM-3103/blob/master/EqMotion.m)
+     This function solves the fourth order equations of motion for an aircraft.
+   
+    [setup_sim.m](https://github.com/zbismo/FP-AEM-3103/blob/master/setup_sim.m)
+     This function is simply used to store intialized variables and other parameters, to tidy up our main code space, and speed up runtime.
    
   # Figures
 
