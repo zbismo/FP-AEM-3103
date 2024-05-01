@@ -6,6 +6,8 @@
   ## Summary of Findings
   <Show the variations studied in a table>
 
+
+    
   Summarized what was accomplished in this study.  Describe 2-4 observations from simulating the flight path.
   Reference the figures below as needed.
 
@@ -13,7 +15,9 @@
  
   # Code Listing
   A list of each function/script and a single-line description of what it does.  The name of the function/script should link to the file in the repository on GitHub.
-
+   [V Gam H R] = setup_sim();
+   This setup function allows us to make our main code more efficient by storing our initialized values and other known paramaters, and loading them in when we run the file.
+   
   # Figures
 
   ## Fig. 1: Single Parameter Variation
