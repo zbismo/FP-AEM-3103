@@ -15,14 +15,14 @@
  
   # Code Listing
 
-   [PaperPlane.m](https://github.com/zbismo/FP-AEM-3103/blob/master/PaperPlane.m)
+  [PaperPlane.m](https://github.com/zbismo/FP-AEM-3103/blob/master/PaperPlane.m)
      This is our main code, where main simulations are run, and results are obatained and plotted in.
-  
-    [EqMotion.m](https://github.com/zbismo/FP-AEM-3103/blob/master/EqMotion.m)
-     This function solves the fourth order equations of motion for an aircraft.
+
+  [EqMotion.m](https://github.com/zbismo/FP-AEM-3103/blob/master/EqMotion.m)
+    This function solves the fourth order equations of motion for an aircraft.
    
-    [setup_sim.m](https://github.com/zbismo/FP-AEM-3103/blob/master/setup_sim.m)
-     This function is simply used to store intialized variables and other parameters, to tidy up our main code space, and speed up runtime.
+  [setup_sim.m](https://github.com/zbismo/FP-AEM-3103/blob/master/setup_sim.m)
+    This function is simply used to store intialized variables and other parameters, to tidy up our main code space, and speed up runtime.
    
   # Figures
 
