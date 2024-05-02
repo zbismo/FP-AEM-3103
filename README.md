@@ -6,13 +6,10 @@
   ## Summary of Findings
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/ef2fd00d-a824-4e0f-a15d-0e9749434b42)
 
-  In this study, we looked at aerospace flight characteristics, specifically taking a look at a paper airplane glider. We utilized matlab to simulate flight trajectories of this glider, with various changes in intial velocites and flight path angles (Fig. 1). We then applied the Monte Carlo Simulation by randomizing 100 simulations of this glider with varying initial conditions. Then we displayed these in  their own respective graphs, along with making a line of best fit for both Range and Height vs Time (Fig. 2). Finally, we took derivatives of these graphs to interperate the rate of changes of both height and range with respect to time.
-  An observation we observed in regards to the gliders height versus time, it seems that initally the glider will dip down in height from its starting point, to then approach a second (smaller) peak, before then cotinuining in its downward trajectory. 
-    
-  Summarized what was accomplished in this study.  Describe 2-4 observations from simulating the flight path.
-  Reference the figures below as needed.
+  In this study, we looked at aerospace flight characteristics, specifically taking a look at a paper airplane glider. We utilized matlab to simulate flight trajectories of this glider, with various changes in intial velocites and flight path angles (Fig. 1). We then applied the Monte Carlo Simulation by randomizing 100 simulations of this glider with varying initial conditions (Fig 2.1). Then we displayed these in  their own respective graphs, along with making a line of best fit for both Range and Height vs Time (Fig. 2.2 and 2.3). Finally, we took derivatives of these graphs to interperate the rate of changes of both height and range with respect to time.
+  
+  An observation we observed in regards to the gliders height versus time, it seems that initally the glider will dip down in height from its starting point, to then approach a second (smaller) peak, before then cotinuining in its downward trajectory. In regards to range versus time, this appears to be much more linear. This can be confirmed when we took the derivative of range with respect to time (Fig. 3), which was mostly flat. The slight bumps can be attributed to noise.
 
-  *If the analysis falls short of the goal, this is your chance to explain what was done or what were the barriers.*
  
   # Code Listing
 
@@ -32,25 +29,24 @@
   This graph with sublots shows changing initial velocity versus height across three different points (higher, lower, and nominal). The second subplot shows changing in initial flight path angle, with again a higher, lower, and nominal input. 
   
   ## Fig. 2: Monte Carlo Simulation
-  <2D trajectories simulated using random sampling of parameters, overlay polynomial fit onto plot.>
+Fig 2.1
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/e1c282d7-f82a-4ae3-a6ab-3eb08fe2a21d)
 This is a figure of the 100 random simulation runs for height versus range. I say "a" figure as with each time running the code, a new generation would be applied and vary somewhat, as they are random.
+Fig 2.2
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/363b3d87-b954-44f5-96c4-1d4bd0a6d5e5)
 This is a figure for the average height trajectories of the 100 random samples wrt. We used the polyfit function to the 11th order, as we found it to fit the points the best.
+Fig 2.3
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/13d2404c-f17f-499c-806f-aefcd6e61fd8)
 This is a figure for the average range tracjectories of the 100 random samples wrt. We used the polyfit function, but this time just to the 1st order, as our range vs time was pretty linear.
 
  ## Fig. 3: Time Derivatives
- <Time-derivative of height and range for the fitted trajectory>
    
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/f4419d37-985b-4c22-b2e8-24a8be4fa49a)
 
 
-  In our figures, we take the derivates of our poly functions with respecte to times for our Heights and Ranges vs Time, respectively. In other words, we have graphs of Velocities for Range and Height graphed out. Our second graph represents a linear range vs time derivative, which ideally would be flat. It is close to being flat, but the small areas where it is not flat can be attributed to noise due to the randomness of the trials. If we did say 1000 trials, we might not notice the noise as much.
+  In our figures, we take the derivates of our poly functions with respecte to times for our Heights and Ranges vs Time, respectively. In other words, we have graphs of Velocities for Range and Height graphed out. Our second graph represents a linear range vs time derivative, which ideally would be flat. It is close to being flat, but the small areas where it is not flat can be attributed to noise due to the randomness of the trials. If we did say 1000 trials, we might not notice the noise as much. (Note, in our code we were having a problem with using the "diff" function, as it was removing one of our entries, causing arrays to not match up when plotting. This is why we used the "gradient" function, to fix this error, by accounting for the lost zero)
 
- 
 
-  # Animation
   ## Point-Mass Animation
   <Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)>
  
