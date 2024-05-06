@@ -4,7 +4,7 @@
 
 
 	
-	
+	close all;
 %	a) Equilibrium Glide at Maximum Lift/Drag Ratio
     [V Gam H R] = setup_sim();
 	to		=	0;			% Initial Time, sec
@@ -33,11 +33,16 @@
     subplot(2,1,1);
 	plot(x1(:,4),x1(:,3),'r',x2(:,4),x2(:,3),'k',x3(:,4),x3(:,3),'g');
 	xlabel('Range, m'), ylabel('Height, m'), grid, title('Changing Initial Velocity');
-
+    hold on;
+    
+    
 
     subplot(2,1,2);
 	plot(x4(:,4),x4(:,3),'r',x5(:,4),x5(:,3),'k', x6(:,4),x6(:,3),'g');
 	xlabel('Range, m'), ylabel('Height, m'), grid, title('Changing Initial Flight Path Angle');
+
+    
+    
 
 
 %   3) Creating 100 random trials
@@ -129,5 +134,54 @@
 	subplot(2,2,4)
 	plot(ta,xa(:,4),tb,xb(:,4),tc,xc(:,4),td,xd(:,4))
 	xlabel('Time, s'), ylabel('Range, m'), grid
+
+
+    figure(8)
+    for i=1:length(x2) % use for loop to animate the line
+            % nominal values 
+            plot(x2(:,4), x2(:,3));
+            hold on;
+            
+
+            plot(x2(1:i,4),x2(1:i,3),'o','MarkerFaceColor','k');
+            hold off;
+            xlabel('Distance (m)');ylabel('Height (m)'); title('Nominal Value GIF')
+            
+            frame = getframe(gcf);
+            im = frame2im(frame);
+            [imind, cm] = rgb2ind(im, 256);
+            
+
+            if i == 1
+                imwrite(imind, cm, 'nomial_airplane.gif', 'gif', 'LoopCount', inf, 'DelayTime',0.1);
+            else
+                imwrite(imind, cm, 'nomial_airplane.gif', 'gif', 'WriteMode', 'append', 'DelayTime',0.1);
+            end
+
+        
+    end
+    figure(9)
+    for i = 1:length(x6)
+        % high values
+            plot(x6(:,4),x6(:,3));
+            hold on;
+            plot(x6(1:i,4),x6(1:i,3),'o','MarkerFaceColor','g');
+            xlabel('Distance (m)');ylabel('Height (m)'); title('High Value GIF')
+            hold off;
+            
+                
+            frame = getframe(gcf);
+            im = frame2im(frame);
+            [imind, cm] = rgb2ind(im, 256);
+            
+
+            if i == 1
+                imwrite(imind, cm, 'High_airplane.gif', 'gif', 'LoopCount', inf, 'DelayTime',0.1);
+            else
+                imwrite(imind, cm, 'High_airplane.gif', 'gif', 'WriteMode', 'append', 'DelayTime',0.1);
+            end
+
+            
+    end
 
 
