@@ -56,4 +56,4 @@ Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=
 
 ![High_airplane](https://github.com/zbismo/FP-AEM-3103/assets/167819715/9c669f77-d19b-4c11-a0e0-874e99a38963)
 
-
+We decided to make two seperate graphs for our point mass animations as we were having difficulties getting them to work on the same figure.
