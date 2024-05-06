@@ -35,11 +35,11 @@ This is a figure of the 100 random simulation runs for height versus range. I sa
 
 Fig 2.2
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/363b3d87-b954-44f5-96c4-1d4bd0a6d5e5)
-This is a figure for the average height trajectories of the 100 random samples wrt. We used the polyfit function to the 11th order, as we found it to fit the points the best.
+This is a figure for the average height trajectories of the 100 random samples wrt. We used the polyfit function to the 11th order, as we found it to fit the points the best. The red line represents the line of best fit "polyfit" function.
 
 Fig 2.3
 ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/13d2404c-f17f-499c-806f-aefcd6e61fd8)
-This is a figure for the average range tracjectories of the 100 random samples wrt. We used the polyfit function, but this time just to the 1st order, as our range vs time was pretty linear.
+This is a figure for the average range tracjectories of the 100 random samples wrt. We used the polyfit function, but this time just to the 1st order, as our range vs time was pretty linear. The red line represents the line of best fit "polyfit" function.
 
  ## Fig. 3: Time Derivatives
    
