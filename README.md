@@ -26,7 +26,7 @@
 
   ## Fig. 1: Single Parameter Variation
   ![image](https://github.com/zbismo/FP-AEM-3103/assets/167819715/4700f6dc-8b11-4e2e-a038-76032b0be496)
-  This graph with sublots shows changing initial velocity versus height across three different points (higher, lower, and nominal). The second subplot shows changing in initial flight path angle, with again a higher(green), lower(red), and nominal(black) input. 
+  This graph with sublots shows changing initial velocity versus height across three different points (higher, lower, and nominal). The second subplot shows changing in initial flight path angle, with again a higher (green), lower (red), and nominal (black) input. 
   
   ## Fig. 2: Monte Carlo Simulation
 Fig 2.1
