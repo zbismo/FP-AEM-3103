@@ -144,12 +144,11 @@
             
 
             plot(x2(1:i,4),x2(1:i,3),'o','MarkerFaceColor','k');
-            hold off;
             xlabel('Distance (m)');ylabel('Height (m)'); title('Nominal Value GIF')
             
-            frame = getframe(gcf);
-            im = frame2im(frame);
-            [imind, cm] = rgb2ind(im, 256);
+            drawnow;
+            hold off;
+
             
 
             if i == 1
@@ -167,12 +166,10 @@
             hold on;
             plot(x6(1:i,4),x6(1:i,3),'o','MarkerFaceColor','g');
             xlabel('Distance (m)');ylabel('Height (m)'); title('High Value GIF')
-            hold off;
             
                 
-            frame = getframe(gcf);
-            im = frame2im(frame);
-            [imind, cm] = rgb2ind(im, 256);
+            drawnow
+            hold off;
             
 
             if i == 1
