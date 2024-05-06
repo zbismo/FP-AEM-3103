@@ -50,5 +50,10 @@ This is a figure for the average range tracjectories of the 100 random samples w
 
 
   ## Point-Mass Animation
-  <Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)>
- 
+Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)
+![nomial_airplane](https://github.com/zbismo/FP-AEM-3103/assets/168034962/cc3f935b-ecc4-4ab1-9a0e-c8297e6250ff)
+
+
+![High_airplane](https://github.com/zbismo/FP-AEM-3103/assets/167819715/9c669f77-d19b-4c11-a0e0-874e99a38963)
+
+
